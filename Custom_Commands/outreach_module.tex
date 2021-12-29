@@ -1,0 +1,66 @@
+\usepackage{wrapfig}
+\usepackage{calc}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+
+\newcommand{\insertOutreachEvent}[8]{
+	\newpage	
+	\pagestyle{plain}
+	{
+	\setthemecolor[DmgLilac]
+	\begin{commentbox}{\flushleft{\huge{{\textrm{#1}}}}}
+\flushleft
+\textrm{\textbf{Date:} #2} \\
+\textrm{\textbf{Event Total:} #3 Hours} \\
+	\end{commentbox}
+	}
+	
+	\addcontentsline{toc}{section}{\numberline{}#1}
+
+	{
+    \noindent\makebox[\textwidth][c]{%
+	\begin{minipage}{\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{Outreach/Images/#4}
+	  %\captionof{figure}{Figure 1}
+	  %\label{fig:test1}
+	\end{minipage}}%
+    }
+    
+    \setthemecolor[DmgLavender]	
+    \begin{paperbox}{\flushleft{{Purpose:}}}
+    
+    \flushleft{#5}
+    
+    \end{paperbox}
+    
+    {\flushleft{\textbf{Description:}}} \\*
+
+	#6	
+	% \begin{figure}[H]
+	% \centering
+	% \begin{minipage}{.5\textwidth}
+	%   \centering
+	%   \includegraphics[width=0.9\linewidth]{Outreach/Images/#7}
+	%   %\captionof{figure}{Figure 1}
+	%   %\label{fig:test1}
+	% \end{minipage}%
+	% \begin{minipage}{.5\textwidth}
+	%   \centering
+	%   \includegraphics[width=0.9\linewidth]{Outreach/Images/#8}
+	%   %\captionof{figure}{Figure 2}
+	%   %\label{fig:test2}
+	% \end{minipage}
+	% \end{figure}
+
+ \begin{figure}[h!]
+ \centering
+   \includegraphics[width=\textwidth, angle=0]{Outreach/Images/#7}
+ \end{figure}
+
+ \begin{figure}[h!]
+ \centering
+   \includegraphics[width=\textwidth, angle=0]{Outreach/Images/#8}
+ \end{figure}
+}

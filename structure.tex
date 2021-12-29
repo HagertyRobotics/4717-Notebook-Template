@@ -1,0 +1,351 @@
+\errorcontextlines 10000
+% Use \raggedbottom to stop latex from trying to add space 
+% between sections to try to fill the page with text up to the 
+% bottom
+\raggedbottom
+
+\makeatletter
+% define a user command to choose the image
+% this command also creates an internal command to insert the image
+\newcommand{\partimage}[2][]{\gdef\@partimage{\includegraphics[#1]{#2}}}
+%\renewcommand{\printparttitle}[1]{\parttitlefont #1\vfil\@partimage\vfil}
+\makeatother
+
+%%% PACKAGES 
+%%%----------------------------------------------------
+\usepackage[utf8]{inputenc} % If utf8 encoding
+\usepackage[T1]{fontenc}    %
+\usepackage[english]{babel} % English please
+\usepackage{lipsum} % generates fake test (testing)
+%\usepackage[final]{microtype} % Less badboxes
+\usepackage{blindtext}
+%\usepackage{showframe}
+%\usepackage{kpfonts} %Font
+\usepackage{amsmath,amssymb,mathtools} % Math
+%\usepackage[table,xcdraw]{xcolor} %for chart
+\usepackage{tikz} % Figures
+\usepackage{multicol}
+%\usetikzlibrary{trees}
+\usepackage{graphicx} % Include figures  NOTE: include [demo] to see black boxes
+%\setkeys{Gin}{quiet}
+%\setkeys{Gin}{keepaspectratio,width=2in,height=2in}
+%\usepackage[margin=10pt,font=small,labelfont=bf,justification=raggedright]{caption}
+%\usepackage{subcaption}  // memior already has it
+%\usepackage{subfigure}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+%\pgfplotsset{}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{pagenote}
+\usepackage{array}
+\usepackage{listings}
+%\usepackage[export]{adjustbox}
+%\usepackage[breaklinks]{hyperref}
+\usepackage{placeins}
+\usepackage[tikz]{bclogo}
+
+%\setlength{\cftfigurenumwidth}{3em} % Memoir way of doing width.  Small space in list of figures table
+%\setlength{\cftchapternumwidth}{8mm}
+%\setlength{\cftsectionnumwidth}{10mm}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+\usepackage{fancyvrb}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+%\usepackage[bg=print, layout=false]{dnd}
+\usepackage{geometry}
+    \geometry{
+    left=0.15\paperwidth,
+    right=0.15\paperwidth,
+    top=0.1\paperwidth,
+    bottom=0.1\paperwidth
+    }
+
+%\usepackage{hyperref} %breaks everything.  Need to look into it.
+\def\hhsurl#1{\expandafter\string\csname #1\endcsname}
+
+%\renewcommand{\chapternumberline}[1]{}% Gobble chapter number in ToC
+%\renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapter dots in ToC
+
+%Get rid of anoying pdf message about version 1.5
+%\pdfminorversion=6
+
+%The "booktabs" package makes nice tables. Sparing use of lines makes tables look much nicer (less "grid" like). %Multirow lets you make elements that span multiple rows or columns. The the package docs for examples.
+%\usepackage{booktabs}
+%\usepackage{multirow}
+
+
+%%% PAGE LAYOUT 
+%%%----------------------------------------------------
+
+%\setlrmarginsandblock{0.15\paperwidth}{*}{1} % Left and right margin
+%\setulmarginsandblock{0.1\paperwidth}{*}{1}  % Upper and lower margin
+%\checkandfixthelayout
+
+%\setbinding{4mm}
+%\settypeblocksize{*}{24.5pc}{1.618}
+%\setlrmargins{*}{*}{1.5}
+%\setulmarginsandblock{6pc}{7pc}{*}
+%\setmarginnotes{6pt}{6pc}{12pt}
+%\strictpagecheck
+%\setlength{\topskip}{1.6\topskip}
+%\checkandfixthelayout
+
+%%% SECTIONAL DIVISIONS
+%%%----------------------------------------------------
+
+%\maxsecnumdepth{subsection} % Subsections (and higher) are numbered
+%\setsecnumdepth{subsection}
+
+%
+% Reset chapter numbers for each part
+%
+%\makeatletter
+%\@addtoreset{chapter}{part}
+%\makeatother 
+
+%\setsecheadstyle{\normalfont\large\bfseries}
+%\setsubsecheadstyle{\normalfont\normalsize\bfseries}
+%\setparaheadstyle{\normalfont\normalsize\bfseries}
+%\setparaindent{0pt}\setafterparaskip{0pt}
+
+%%% FLOATS AND CAPTIONS
+%%%----------------------------------------------------
+
+\makeatletter                  % You do not need to write [htpb] all the time
+\renewcommand\fps@figure{htbp} %
+\renewcommand\fps@table{htbp}  %
+\makeatother                   %
+
+%\captiondelim{\null\newline}
+%\captionnamefont{\small\sffamily\bfseries}
+%\captiontitlefont{\small\sffamily\linespread{.84}\selectfont}
+%\captionstyle[\centering]{\raggedright}
+%\normalcaptionwidth
+%\captiontitlefinal{.}
+%\setlength\belowcaptionskip{.5ex}
+
+% Don: breaks side by side figures
+%\captiondelim{\space } % A space between caption name and text
+%\captionnamefont{\small\bfseries} % Font of the caption name
+%\captiontitlefont{\small\normalfont} % Font of the caption text
+
+%\changecaptionwidth          % Change the width of the caption
+%\captionwidth{1\textwidth} %
+
+%%% ABSTRACT
+%%%----------------------------------------------------
+
+%\renewcommand{\abstractnamefont}{\normalfont\small\bfseries} % Font of abstract title
+%\setlength{\absleftindent}{0.1\textwidth} % Width of abstract
+%\setlength{\absrightindent}{\absleftindent}
+
+%%% HEADER AND FOOTER 
+%%%----------------------------------------------------
+
+
+%
+% Add graphics directories to search
+%
+%\graphicspath{{Images/}}
+
+%%% TABLE OF CONTENTS
+%%%----------------------------------------------------
+
+% Only parts, chapters and sections in the table of contents
+%\maxtocdepth{subsection} 
+%\settocdepth{subsection}
+
+% Make overflow at end of line for big pages numbers go away
+%\setpnumwidth{2.5em}
+
+% Center part number on line and add color
+%\makeatletter
+%\renewcommand{\partnumberline}[1]{\sffamily\large\bfseries\color{blue}\hfil\hspace\@tocrmarg Part #1:~}
+%\makeatother
+%\renewcommand{\cftpartfont}{\large\normalfont}
+%\cftpagenumbersoff{part}
+
+% Add Colored text before each "part" of TOC
+%\cftpagenumbersoff{part}
+%\renewcommand{\cftpartpresnum}{\sffamily\large\bfseries\color{blue}\partname\ }
+%\renewcommand{\cftpartaftersnumb}{\\}
+%\cftsetindents{part}{0em}{0em}
+
+% Center Part Numbers in TOC
+%\makeatletter
+%\renewcommand\partnumberline[1]{\hfil\hspace\@tocrmarg #1~}
+%\makeatother
+
+% Add a \par to the end of the TOC
+\AtEndDocument{\addtocontents{toc}{\par}} 
+
+% Add "Meeting" at the start of each TOC entry
+%\renewcommand{\cftchaptername}{Meeting\space}
+
+%%% INTERNAL HYPERLINKS
+%%%----------------------------------------------------
+
+%\usepackage{hyperref}   % Internal hyperlinks
+%\hypersetup{
+%pdfborder={0 0 0},      % No borders around internal hyperlinks
+%pdfauthor={I am the Author} % author
+%}
+%\usepackage{memhfixc}
+
+%%% NEW COMMANDS
+%%%----------------------------------------------------
+\input{Custom_Commands/bios_module.tex}
+\input{Custom_Commands/mentors_module.tex}
+\input{Custom_Commands/CV_module.tex}
+\input{Custom_Commands/outreach_module.tex}
+\input{Custom_Commands/competition_module.tex}
+\input{Custom_Commands/meeting_module.tex}
+\input{Custom_Commands/section_module.tex}
+\input{Custom_Commands/meetingimg_module.tex}
+\input{Custom_Commands/unchapter_module.tex}
+\input{Custom_Commands/design_module.tex}
+\input{Custom_Commands/monsterbox_bios_module.tex}
+\input{Custom_Commands/finance_module.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% new itemize enviroment that doesn't allow latex to put 
+% more space between items when it tries to fill the entire 
+% page with text.  If you use /raggedbottom then this is not needed.
+\newenvironment{myitemize}
+{ \begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}     }
+{ \end{itemize}  }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pagenote section
+% Use page notes to mark control and innovation
+\makepagenote
+%\continuousnotenums
+%\notepageref
+\renewcommand*{\pagenotesubhead}[3]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Control label
+% 
+\makeatletter
+\newcommand{\interesting}[2]{%
+  \@bsphack
+  \csname phantomsection\endcsname % in case hyperref is used
+  \def\@currentlabel{#1}{\label{#2}}%
+  \@esphack
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Interesting Page Table
+% 
+\newcommand{\interestingpagetable}{
+	\newpage	
+	\pagestyle{plain}
+	\textbf{\Huge Interesting Pages}
+	\addcontentsline{toc}{section}{\numberline{}Interesting Pages}
+  
+ 	\vspace*{1cm}
+	 %\par 
+    We have created the table below that highlights some of the more interesting pages in our notebook.  The highlighted ones are also tabbed.
+    
+    \vspace*{1cm}
+    
+    % more space between rows
+    \renewcommand{\arraystretch}{1.2} 
+    % Remove space to the vertical edges
+    %\begin{tabular}{@{}lll@{}}
+    
+    %\interesting{This is an example of a good control}{control:1} % enter this in the actual page file
+    
+\resizebox{\textwidth}{!}{%
+    \begin{tabular}{lp{0.7\textwidth}r}
+		\toprule
+		Type & Description & Page \\ 
+	\midrule
+            
+            Innovate & \ref{innovate:1} & \pageref{innovate:1}\\
+            Innovate & \ref{innovate:3} & \pageref{innovate:3}\\
+            Innovate & \ref{Innovate:4} & \pageref{Innovate:4}\\
+            Innovate & \ref{Innovate:55} & \pageref{Innovate:55}\\
+            Design & \ref{design:1} & \pageref{design:1}\\
+            Design & \ref{design:2} & \pageref{design:2}\\
+            Design & \ref{design:3} & \pageref{design:3}\\
+            Design & \ref{design:5} & \pageref{design:5}\\
+            Design & \ref{design:6} & \pageref{design:6}\\
+            Control & \ref{control:1} & \pageref{control:1}\\
+            Control & \ref{control:2} & \pageref{control:2}\\
+            Control & \ref{control:3} & \pageref{control:3}\\
+            Control & \ref{control:4} & \pageref{control:4}\\
+            Control & \ref{innovate:2} & \pageref{innovate:2}\\
+            Control & \ref{control:77} & \pageref{control:77}\\
+            Control & \ref{control:44} & \pageref{control:44}\\
+            Control & \ref{control:99} & \pageref{control:99}\\
+            Connect & \ref{connect:1} & \pageref{connect:1}\\
+            Connect & \ref{connect:2} & \pageref{connect:2}\\
+            Connect & \ref{connect:3} & \pageref{connect:3}\\
+            Connect & \ref{connect:4} & \pageref{connect:4}\\
+            Think & \ref{timeline:1} & \pageref{timeline:1}\\
+            Think & \ref{think:1} & \pageref{think:1}\\
+            Think & \ref{think:2} & \pageref{think:2}\\
+            Competition & \ref{competition:1} & \pageref{competition:1}\\
+            Competition & \ref{competition:2} & \pageref{competition:2}\\
+            Competition & \ref{competition:3} & \pageref{competition:3}\\
+	
+           
+		\bottomrule
+	\end{tabular}
+}
+    \vspace{.5cm}
+\newline \textbf{Recent Update: We are now balancing without touching the ground with our arms!} For more information, please see the control sections.
+}
+
+\makepagenote
+
+%Code to make Figures stay within their \section (i.e. Programming):
+\makeatletter
+    \renewcommand\section{\@startsection {section}{1}{\z@}%
+       {-3.5ex \@plus -1ex \@minus -.2ex}%
+       {2.3ex \@plus.2ex}%
+       {\FloatBarrier\normalfont\large\bfseries}}
+\makeatother
+
+%Code to make Figures stay within their \subsection (i.e. Accomplishments):
+\makeatletter
+\AtBeginDocument{%
+  \expandafter\renewcommand\expandafter\subsection\expandafter
+    {\expandafter\@fb@secFB\subsection}%
+  \newcommand\@fb@secFB{\FloatBarrier
+    \gdef\@fb@afterHHook{\@fb@topbarrier \gdef\@fb@afterHHook{}}}%
+  \g@addto@macro\@afterheading{\@fb@afterHHook}%
+  \gdef\@fb@afterHHook{}%
+}
+\makeatother
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{pgrey}]{$$},
+  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}

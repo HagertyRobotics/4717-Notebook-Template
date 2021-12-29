@@ -1,0 +1,47 @@
+\usepackage{adjustbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1 Name
+% 2 Bio Image
+% 3 Quote
+% 4 Committees
+% 5 Current grade
+% 6 Leave Blank
+% 7 Stats, with & between each stat
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dndbio}[7]{
+	\newpage
+	\addcontentsline{toc}{section}{\numberline{}#1}
+	\begin{figure}
+	\centering
+	\includegraphics[height=.45\paperwidth, keepaspectratio]{Bios/Images/#2}
+	\end{figure}
+	\begin{monsterboxnobg}{#1}
+		\begin{hangingpar}
+	    	\textit{``#3''}
+	  	\end{hangingpar}
+	\dndline
+	\basics[%
+		committees = \Large{#4},
+		Current Grade = \Large{#5},
+		Stats = \Large{#6}
+	]
+	\vspace{3mm}
+	\stats[
+	    STAT = \stat{#7}
+	]
+	\dndline%
+	\end{monsterboxnobg}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Use \monstersection{"Title"} beforehand to create a section (which is just a list), then use this command to create entries in the list
+% 1 Entry
+% 2 Description
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\dndaction}[2]{
+	\begin{monsteraction}[\large{#1}]
+	        #2
+	    \end{monsteraction}
+}

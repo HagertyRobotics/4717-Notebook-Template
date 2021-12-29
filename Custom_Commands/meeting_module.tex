@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                insertmeeting
+% 1) Title (something creative & funny?)
+% 2) Date (MM/DD/YYYY)
+% 3) Location (ex. Hagerty High School)
+% 4) People/Committees Present 
+% 5) Picture 
+% 6) Start Time & Stop Time (ex. 12:30AM to 4:30PM)
+% 7) Weight (ex. 48)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\insertmeeting}[7]{
+% pagestyle
+%   meeting - chapter and section on the same heading
+%   headings - 
+%   ruled - horizontal line in the heading
+\pagestyle{ruled}
+\addcontentsline{toc}{section}{\numberline{}#2 - #1}
+% \section[#2 - #1]{#2}
+% \chapter[#2 - #1]{#2}
+% \index{#2} 
+
+\begin{figure}[h]
+\begin{minipage}[b]{0.6\linewidth}
+    \begin{description}
+        \item [\Large \textcolor{black}{#1}]
+        \item #2
+        \item #3
+        \item #4
+        \item #6
+    \end{description} 
+\end{minipage}%
+\hfill
+\begin{minipage}[b]{0.35\linewidth}
+	\raggedleft
+
+    %\includegraphics[scale=0.3]{#5}
+    %\setlength{\fboxsep}{0pt}\fbox{
+    %\includegraphics[width=.3\linewidth]
+    %\frame{\includegraphics[width=3cm,height=3cm,keepaspectratio]
+    \fbox{\includegraphics[width=3cm,height=3cm,keepaspectratio]
+    {#5}}
+    \centering
+    \par Bullseye (#7 lbs.)
+\end{minipage}
+%\noindent\rule{\textwidth}{1pt}
+\vspace{5mm}
+\begingroup % because of color
+	\color{gray}%
+	\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
+\endgroup
+
+\end{figure}%
+}  %end newcommand

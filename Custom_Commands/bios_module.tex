@@ -1,0 +1,73 @@
+\usepackage{wrapfig}
+\usepackage{calc}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+
+\newcommand{\insertbio}[8]{
+	\newpage	
+	\pagestyle{plain}
+	\begin{flushright}
+	\textbf{\Huge #1}
+	\end{flushright}
+	\addcontentsline{toc}{section}{\numberline{}#1}
+    %\index{#1} 
+	%\newlength{\strutheight}
+	%\settoheight{\strutheight}{\strut}
+	\begin{adjustbox}{valign=T,
+    				%raise=\strutheight,
+                    minipage={\linewidth}}
+    	\begin{wrapfigure}{R}{0pt}
+    		%\includegraphics[width=160px]{Bios/#2} 
+            \includegraphics[width=6cm,height=5cm,keepaspectratio]{Bios/Images/#2} 
+            % Portrait shot: looks best in 2:3 ratio, square is acceptable
+    	\end{wrapfigure}
+    	\strut{}
+    \end{adjustbox}
+    \subsection*{Quick Facts}
+	\begin{itemize}
+		\item \textsc{\large Interests:} #3
+		\item \textsc{\large Sub-Team:} #4
+		\item \textsc{\large Year:} #5
+	\end{itemize}
+	\vspace{1cm}		
+	\subsection*{Biography}
+	#6	
+	\begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.95\linewidth]{Bios/Images/#7}
+	  %\captionof{figure}{Figure 1}
+	  %\label{fig:test1}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.95\linewidth]{Bios/Images/#8}
+	  %\captionof{figure}{Figure 2}
+	  %\label{fig:test2}
+	\end{minipage}
+	\end{figure}
+}
+
+%%% OLD CODE %%%
+% \newcommand{\insertbio}[6]{
+% 	\pagestyle{headings}
+% 	\section {#1}
+% 	\index{#1} 
+    
+%     \normalcaptionwidth	%memior caption stuff
+%     %\setlength{\intextsep}{0pt}%
+% 	%\setlength{\columnsep}{0pt}%
+% 	\begin{wrapfigure}{L}{0pt}
+
+%       %\vspace{-10pt}
+%       \centering
+%       \includegraphics[width=0.4\textwidth]{Bios/#2}
+%       \caption{#1}
+      
+%       %\vspace{-10pt}
+% 	\end{wrapfigure}
+%     #6
+%     \changecaptionwidth   %memior caption stuff
+% }

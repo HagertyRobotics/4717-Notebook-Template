@@ -1,0 +1,111 @@
+%/Template RN
+% Fill in any thing that is in quotes. ("") 
+% % What everything in lines 11 - 16 are. 
+% % 1) Title
+% % 2) Date
+% % 3) Location
+% % 4) Those Present
+% % 5) Picture(s)
+% % 6) Weight(almost always 1lb)
+
+\insertmeeting 
+	{"Title"} 
+	{"MM/DD"/YYYY}
+	{"Location"}
+	{"People Who Were Present"}
+	{RobotPics/robot5.jpg}%This calls on a picture from the RobotPics folder to be used as a thumbnail at the top right of the page, 
+	{1lb}
+	
+
+%\hl{this is some highlighted text}		highlight text
+%\textbf{}		bold face text
+
+
+% Usually, all meetings start with a list of goals for the meeting. 
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+\section{"Section Name"}
+\subsection*{Goals}
+\begin{itemize}
+	\item "Write Goals" 
+\end{itemize} 
+
+% Below Creates a line across the paper. 
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+
+% Ignore this. 
+% \noindent\hfil\rule{\textwidth}{.4pt}\hfil
+% \subsection{People Working On It}
+% \begin{itemize}
+% 	\item "Write Names" 
+% \end{itemize} 
+
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+\subsection*{"Results"}
+	"Write results here." 
+
+
+% Picture Insert Code
+%  \begin{figure}[h!]
+%  \centering
+%    \includegraphics[width=0.4\textwidth, angle=0]{Meeting/January/01-10-17/Cap_Ball_Lifter_Drawing.png}
+%   \caption{Hand drawing of claw grabber and cap ball mechanisms}
+%   \label{fig:Cap_Ball_Lifter_Drawing}
+%  \end{figure}
+
+% Picture Positioning:
+% h - puts the image exactly where you want it in the document
+% ! - tells latex to ignore some of its other rules to make your thing happen
+% t - try to put it at the top of the page
+% b - try to put it at the bottom of the page
+% p - make a special page for the float
+% H - Really really put it here
+
+% Example Table 
+% A B C
+% D E F
+% G H I 
+    \begin{tabular}{lp{0.7\textwidth}r}
+		\toprule
+		A & B & C \\
+		\midrule
+        D & E & F \\ 
+        G & H & I \\ 
+		\bottomrule
+	\end{tabular}
+    
+    
+    
+    
+% Creating Double Picture Minipages
+% \begin{figure}[htp]
+% \centering
+% \begin{minipage}{.48\textwidth}
+%   \centering
+%   \includegraphics[width=\linewidth]{Meetings/February/02-08-18/GlyphDitchIssue.jpg}
+%   \caption{Glyph Getting Caught Underneath the Back Plate}
+%   \label{fig:front}
+% \end{minipage}%
+% \hfill
+% \begin{minipage}{.48\textwidth}
+%   \centering
+%   \includegraphics[width=\linewidth]{Meetings/February/02-08-18/GlyphDitchIssue.jpg}
+%   \caption{Glyph Getting Caught Underneath Kicker}
+%   \label{fig:back}
+% \end{minipage}
+% \end{figure}
+
+
+%This is how you reference a figure in text.
+%As shown in Figure \ref{fig:jewel}
+
+
+Horizontal spaces between figures are controlled by one of several commands, which are placed in between \begin{subfigure} and \end{subfigure}:
+
+A non-breaking space (specified by ~ as in the example above) can be used to insert a space in between the subfigs.
+Math spaces: \qquad, \quad, \;, and \,
+Generic space: \hspace{''length''}
+Automatically expanding/contracting space: \hfill
+
+% Fix overflows in tables
+\resizebox{\textwidth}{!}{%
+ 

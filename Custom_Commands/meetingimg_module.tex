@@ -1,0 +1,17 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                insertimage
+%
+% 1) Image File Path 
+% 2) Caption (Camel Case, Short & Descriptive)
+% 3) Label (UNIQUE identifier for each image)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\insertmeetingimage}[3]{
+
+\begin{wrapfigure}{c}{0.75\linewidth}
+\includegraphics[width=\linewidth]{#1}
+\caption{#2}
+\label{fig:#3}
+\end{wrapfigure}
+
+}

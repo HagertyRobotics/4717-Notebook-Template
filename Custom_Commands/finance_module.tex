@@ -1,0 +1,57 @@
+\usepackage{wrapfig}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 1 5-6 line introduction of current finances
+% 2 Funding goals image path
+% 3 Label for the funding goals
+% 4 Table of funds 
+% 5 Label for table
+% 6 Pie Chart of breakdown
+% 7 Label for pie chart
+% 8 Bar chart of how we use our money
+% 9 Label for the use
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\financemodule}[9]{
+	
+	\newpage
+	\addcontentsline{toc}{section}{Business Plan}
+	\large{\textbf{Current Financials: }#1}\\
+
+	% make this a lot longer, fill 4-5 lines in the pdf
+	\large{Our original funding goals can be visualized through \ref{fig:#3}.}\\
+
+	\begin{figure}[h!]
+    	\centering
+    	\includegraphics[width=0.6\textwidth]{#2}
+		\label{fig:#3}
+		\caption{Current Funding Goals}	
+	\end{figure}
+
+	\large{We receive funds through multiple sources, with \ref{fig:#5} showing the complete breakdown of our team's funding, and the source of funding is shown through \ref{fig:#7}.}\\
+
+	\newpage
+	\begin{figure}[h!]
+		\begin{minipage}{.5\textwidth}
+			\centering
+	    	\includegraphics[width=0.98\linewidth]{#4}
+			\label{fig:#5}
+			\caption{The team's total funding}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+	    	\includegraphics[width=0.98\linewidth]{#6}
+			\label{fig:#7}
+			\caption{A breakdown of the funding}
+	\end{minipage}
+	\end{figure}
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=.6\textwidth]{#8}
+		\label{fig:#9}
+		\caption{How we use our money}
+	\end{figure}
+
+	\Large{"Some comparison of how we expected to spend our money and how we actually spended our money"}
+}

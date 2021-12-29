@@ -1,0 +1,37 @@
+\usepackage{wrapfig}
+\usepackage{calc}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+
+\newcommand{\insertbiomentor}[6]{
+	%\newpage	
+	\subsection{don}
+	%\pagestyle{plain}
+	\begin{flushright}
+	\textbf{\Huge #1}
+	\end{flushright}
+	%\addcontentsline{toc}{section}{\numberline{}#1}
+    %\index{#1} 
+	%\newlength{\strutheight}
+	%\settoheight{\strutheight}{\strut}
+	\begin{adjustbox}{valign=T,
+    				%raise=\strutheight,
+                    minipage={\linewidth}}
+    	\begin{wrapfigure}{R}{0pt}
+    		%\includegraphics[width=160px]{Bios/#2} 
+            \includegraphics[width=7cm,height=7cm,keepaspectratio]{Bios/Images/#2} 
+            % Portrait shot: looks best in 2:3 ratio, square is acceptable
+    	\end{wrapfigure}
+    	\strut{}
+    \end{adjustbox}
+    \subsection*{Quick Facts}
+	\begin{itemize}
+		\item \textsc{\large Occupation:} #3
+		\item \textsc{\large Relation to Team:} #4
+        \item \textsc{\large Interests:} #5
+	\end{itemize}
+	\vspace{3cm}		
+	\subsection*{Biography}
+	#6	
+}

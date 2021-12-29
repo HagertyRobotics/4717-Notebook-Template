@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%             insertCompetition
+% 1) Competition Name (ex. Ruckus at the Rock)
+% 2) Date (MM/DD/YYYY)
+% 3) Location (ex. Hagerty High School)
+% 4) Meet Ranking (ex. 5th)
+% 5) Match Results Breakdown (image file path)
+% 6) Match Scoring Pie Chart (image file path)
+% 7) Competition OPR Breakdown (image file path)
+% 8) Reflection (text)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{wrapfig}
+\usepackage{calc}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+
+\newcommand{\insertCompetition}[8]{
+	\newpage	
+	\pagestyle{plain}
+	%\begin{flushleft}
+    \begin{description}
+		\item [\Huge Competition:] {\Huge #1}
+		\item [Date:] #2
+		\item [Location:] #3
+        \item [Meet Ranking: #4]
+	\end{description} 
+	\addcontentsline{toc}{chapter}{\numberline C#1 Competition: #2}
+
+	\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth, angle=0]{Competition/Images/#5}
+    \end{figure}
+    
+    \begin{figure}[h!]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.95\linewidth]{Competition/Images/#6}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.95\linewidth]{Competition/Images/#7}
+	\end{minipage}
+	\end{figure}
+    
+	\subsection*{What happened:}
+    {#8}
+    
+ }

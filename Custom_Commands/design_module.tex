@@ -1,0 +1,51 @@
+\usepackage{wrapfig}
+\usepackage{calc}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+
+\newcommand{\insertdesignoverview}[6]{
+	\newpage	
+	\pagestyle{plain}
+	\begin{flushright}
+	\textbf{\Huge #1}
+	\end{flushright}
+	\addcontentsline{toc}{section}{\numberline{}#1}
+    %\index{#1} 
+	%\newlength{\strutheight}
+	%\settoheight{\strutheight}{\strut}
+   
+ %\vspace{.25cm}		
+	\subsection*{Goal: \hl{#2}}
+
+   \begin{figure}[H]
+	\centering
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.95\linewidth]{Design_Overview/#3}
+	  %\captionof{figure}{Figure 1}
+	  %\label{fig:test1}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+	  \centering
+	  \includegraphics[width=0.95\linewidth]{Design_Overview/#4}
+	  %\captionof{figure}{Figure 2}
+	  %\label{fig:test2}
+	\end{minipage}
+	\end{figure}
+    
+%	\vspace{.25cm}		
+	\subsection*{Core Materials}
+	#5
+
+%	\vspace{.25cm}		
+	\subsection*{Manufacturing Processes}
+	#6
+	\vspace{.1cm}
+
+
+	
+%	\vspace{.25cm}		
+%	\subsection*{Description}
+
+}

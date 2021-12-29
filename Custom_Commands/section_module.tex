@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                newsection
+%
+% 1) Committee/Subcommittee Name (ex. Hardware & Design)
+% 2) List of Goals (remember to use \item)
+% 3) Accomplishments (written in third person collective)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\newsection}[4]{
+\addcontentsline{toc}{subsection}{\numberline{}#1}
+
+\subsection*{#1}
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+\begin{multicols}{2}
+
+\setthemecolor[PhbLightGreen]
+
+\begin{paperbox}{\flushleft{Goals:}}
+
+{
+\flushleft
+\begin{itemize}
+#2
+\end{itemize}
+}
+
+\end{paperbox}
+
+{\flushleft{\textbf{\large ACCOMPLISHMENTS:}}} \\*
+\vspace{2mm}
+#3
+
+\end{multicols}
+
+
+{
+
+\setthemecolor[DmgLilac]
+\begin{paperbox}[float=!h]{\flushleft{Next on the Docket:}}
+\flushleft{#4}
+\end{paperbox}
+
+}
+
+}  %end newcommand
