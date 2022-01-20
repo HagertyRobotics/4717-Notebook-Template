@@ -66,6 +66,8 @@
     bottom=0.1\paperwidth
     }
 
+\usepackage{titlesec}
+
 %\usepackage{hyperref} %breaks everything.  Need to look into it.
 \def\hhsurl#1{\expandafter\string\csname #1\endcsname}
 
@@ -349,3 +351,13 @@
   moredelim=[il][\textcolor{pgrey}]{$$},
   moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% reset section numbers on each part
+%
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother
+\titleformat{\part}[display]
+{\normalfont\LARGE\bfseries\centering}{}{0pt}{}
