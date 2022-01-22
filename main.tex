@@ -64,8 +64,18 @@ openany, % A chapter may start on either a recto or verso page.
 \clearpage
 %\mainmatter
 
-\partimage[width=1\textwidth]{Images/Team/Team_Main.PNG}
+ %           _______                     _____           _            
+ %          |__   __|                   |  __ \         | |           
+ %  ______     | | ___  __ _ _ __ ___   | |__) |_ _ _ __| |_   ______ 
+ % |______|    | |/ _ \/ _` | '_ ` _ \  |  ___/ _` | '__| __| |______|
+ %             | |  __/ (_| | | | | | | | |  | (_| | |  | |_          
+ %             |_|\___|\__,_|_| |_| |_| |_|   \__,_|_|   \__|         
+                                                                                                                                    
 \part{Team Section}
+\begin{minipage}[c]{\linewidth}
+\centering
+\includegraphics[width=\linewidth]{Images/Team/Team_Main.PNG}
+\end{minipage}
 
 \cleardoublepage
 
@@ -109,6 +119,7 @@ openany, % A chapter may start on either a recto or verso page.
                     
 \cleardoublepage
 \section{Bios}
+\vspace{3em}
 \begin{minipage}[c]{\linewidth}
 \centering
 \includegraphics[width=\linewidth]{Images/Team/Team_Bios.PNG}
@@ -140,8 +151,7 @@ openany, % A chapter may start on either a recto or verso page.
 %       | |___| (_) | | | | | | | | | | | | |_| ||  __/  __/
 %        \_____\___/|_| |_| |_|_| |_| |_|_|\__|\__\___|\___|
                                                      
-                                                     
-
+                                                    
 \clearpage 
 \pagestyle{plain}
 \noindent\textbf{\Huge Committees}
@@ -225,13 +235,12 @@ Responsible for running the Hagerty Robotics Twitter, Instagram, and website. Le
 %        \____/ \__,_|\__|_|  \___|\__,_|\___|_| |_|
                                              
                                              
-
 \cleardoublepage
 %Outreach
 %\chapterstyle{hhs_blank_chapter}
 % \newcounter{outreach_hours}
 \section{Outreach Section}
-\vspace{5em}
+\vspace{3em}
 \begin{minipage}[c]{\linewidth}
 \centering
 \includegraphics[width=\linewidth]{Images/Main/WoodyDemo.jpg}
@@ -263,21 +272,57 @@ Responsible for running the Hagerty Robotics Twitter, Instagram, and website. Le
 % \include{Outreach/Girls_in_Engineering/GirlsinEngineering}
 
 
+ %           ____            _                       _____           _            
+ %          |  _ \          (_)                     |  __ \         | |           
+ %  ______  | |_) |_   _ ___ _ _ __   ___  ___ ___  | |__) |_ _ _ __| |_   ______ 
+ % |______| |  _ <| | | / __| | '_ \ / _ \/ __/ __| |  ___/ _` | '__| __| |______|
+ %          | |_) | |_| \__ \ | | | |  __/\__ \__ \ | |  | (_| | |  | |_          
+ %          |____/ \__,_|___/_|_| |_|\___||___/___/ |_|   \__,_|_|   \__|         
+                                                                                                                                                           
+\cleardoublepage
+\part{Business Section}
+\vspace{3em}
+\begin{minipage}[c]{\linewidth}
+\centering
+\includegraphics[width=\linewidth]{Images/Main/Big_wheel.JPG}
+\end{minipage}
 
-%        ____            _                     
-%       |  _ \          (_)                    
-%       | |_) |_   _ ___ _ _ __   ___  ___ ___ 
-%       |  _ <| | | / __| | '_ \ / _ \/ __/ __|
-%       | |_) | |_| \__ \ | | | |  __/\__ \__ \
-%       |____/ \__,_|___/_|_| |_|\___||___/___/
-                                        
+
+
+ %  ______ _                        _       _ 
+ % |  ____(_)                      (_)     | |
+ % | |__   _ _ __   __ _ _ __   ___ _  __ _| |
+ % |  __| | | '_ \ / _` | '_ \ / __| |/ _` | |
+ % | |    | | | | | (_| | | | | (__| | (_| | |
+ % |_|    |_|_| |_|\__,_|_| |_|\___|_|\__,_|_|
+                                            
+\section{Financial}
+\vspace{3em}
+\begin{minipage}[c]{\linewidth}
+\centering
+\includegraphics[width=\linewidth]{Images/Main/finance_cover_pic.png}
+\end{minipage}
+
+\include{Business/FinancialGoals}
+
+                  
+
+ %           ______             _                      _               _____           _            
+ %          |  ____|           (_)                    (_)             |  __ \         | |           
+ %  ______  | |__   _ __   __ _ _ _ __   ___  ___ _ __ _ _ __   __ _  | |__) |_ _ _ __| |_   ______ 
+ % |______| |  __| | '_ \ / _` | | '_ \ / _ \/ _ \ '__| | '_ \ / _` | |  ___/ _` | '__| __| |______|
+ %          | |____| | | | (_| | | | | |  __/  __/ |  | | | | | (_| | | |  | (_| | |  | |_          
+ %          |______|_| |_|\__, |_|_| |_|\___|\___|_|  |_|_| |_|\__, | |_|   \__,_|_|   \__|         
+ %                         __/ |                                __/ |                               
+ %                        |___/                                |___/  
 
 \cleardoublepage
-%Business
-\partimage[width=1\textwidth ]{Images/Main/Big_wheel.JPG}
-\part{Business Section}
-\section(Financial)
-\include{Business/FinancialGoals}
+\part{Engineering Section}
+\vspace{3em}
+\begin{minipage}[c]{\linewidth}
+\centering
+\includegraphics[width=\linewidth]{Images/Main/Challenge.png}
+\end{minipage}
 
 
  %       __  __           _   _                 
@@ -287,25 +332,75 @@ Responsible for running the Hagerty Robotics Twitter, Instagram, and website. Le
  %      | |  | |  __/  __/ |_| | | | | (_| \__ \
  %      |_|  |_|\___|\___|\__|_|_| |_|\__, |___/
  %                                     __/ |    
- %                                    |___/     
+ %                                    |___/  
 
-
-\cleardoublepage
-\partimage[width=1.0\textwidth]{Images/Main/Challenge.png}
-\part{Engineering Section}
 \cleardoublepage
 \section{Meetings}
-\include{Meetings/August/08-14-18/meeting}
+\begin{minipage}[c]{\linewidth}
+\centering
+\includegraphics[width=\linewidth]{Images/Main/meeting_cover.jpg}
+\end{minipage}
 
+\include{Meetings/September/09-18-21/meeting}
+\include{Meetings/September/09-21-21/meeting}
+\include{Meetings/September/09-23-21/meeting}
+\include{Meetings/September/09-28-21/meeting}
+\include{Meetings/September/09-30-21/meeting}
+\include{Meetings/October/10-05-21/meeting}
+\include{Meetings/October/10-07-21/meeting}
+\include{Meetings/October/10-12-21/meeting}
+\include{Meetings/October/10-14-21/meeting}
+\include{Meetings/October/10-19-21/meeting}
+\include{Meetings/October/10-21-21/meeting}
+\include{Meetings/October/10-26-21/meeting}
+\include{Meetings/October/10-28-21/meeting}
+\include{Meetings/November/11-02-21/meeting}
+\include{Meetings/November/11-04-21/meeting}
+\include{Meetings/November/11-09-21/meeting}
+\include{Meetings/November/11-11-21/meeting}
+\include{Meetings/November/11-13-21/meeting}
+\include{Meetings/November/11-16-21/meeting}
+\include{Meetings/November/11-18-21/meeting}
+\include{Meetings/November/11-23-21/meeting}
+\include{Meetings/November/11-25-21/meeting}
+\include{Meetings/November/11-30-21/meeting}
+\include{Meetings/December/12-02-21/meeting}
+\include{Meetings/December/12-07-21/meeting}
+\include{Meetings/December/12-09-21/meeting}
+\include{Meetings/December/12-14-21/meeting}
+\include{Meetings/December/12-16-21/meeting}
+\include{Meetings/December/12-18-21/meeting}
+\include{Meetings/December/12-21-21/meeting}
+\include{Meetings/December/12-23-21/meeting}
+\include{Meetings/January/01-04-22/meeting}
+\include{Meetings/January/01-06-22/meeting}
+\include{Meetings/January/01-08-22/meeting}
+\include{Meetings/January/01-11-22/meeting}
+\include{Meetings/January/01-15-22/meeting}
+\include{Meetings/January/01-18-22/meeting}
+\include{Meetings/January/01-20-22/meeting}
+\include{Meetings/January/01-25-22/meeting}
+\include{Meetings/January/01-27-22/meeting}
+
+
+
+ %  _____            _                ____                       _               
+ % |  __ \          (_)              / __ \                     (_)              
+ % | |  | | ___  ___ _  __ _ _ __   | |  | |_   _____ _ ____   ___  _____      __
+ % | |  | |/ _ \/ __| |/ _` | '_ \  | |  | \ \ / / _ \ '__\ \ / / |/ _ \ \ /\ / /
+ % | |__| |  __/\__ \ | (_| | | | | | |__| |\ V /  __/ |   \ V /| |  __/\ V  V / 
+ % |_____/ \___||___/_|\__, |_| |_|  \____/  \_/ \___|_|    \_/ |_|\___| \_/\_/  
+ %                      __/ |                                                    
+ %                     |___/      
 
 \cleardoublepage 
-\partimage[width=1.4\textwidth]{Images/Main/cover.png}
 \section{Design Overview}
 \vspace{3em}
 \begin{minipage}[c]{\linewidth}
 \centering
-\includegraphics[width=\linewidth]{Images/RobotPics/janbigwheel.jpg}
+\includegraphics[width=\linewidth]{Images/RobotPics/robot.jpg}
 \end{minipage}
+
 \include{Design_Overview/Timeline}
 \include{Design_Overview/Timeline2}
 \include{Design_Overview/GamepadControls}
@@ -317,11 +412,21 @@ Responsible for running the Hagerty Robotics Twitter, Instagram, and website. Le
 \cleardoublepage
 
 
-%   Competition
+ %            _____                           _   _ _   _               _____           _            
+ %           / ____|                         | | (_) | (_)             |  __ \         | |           
+ %  ______  | |     ___  _ __ ___  _ __   ___| |_ _| |_ _  ___  _ __   | |__) |_ _ _ __| |_   ______ 
+ % |______| | |    / _ \| '_ ` _ \| '_ \ / _ \ __| | __| |/ _ \| '_ \  |  ___/ _` | '__| __| |______|
+ %          | |___| (_) | | | | | | |_) |  __/ |_| | |_| | (_) | | | | | |  | (_| | |  | |_          
+ %           \_____\___/|_| |_| |_| .__/ \___|\__|_|\__|_|\___/|_| |_| |_|   \__,_|_|   \__|         
+ %                                | |                                                                
+ %                                |_|    
 
-
-\partimage[width=1\textwidth]{Images/Main/competitionwoo.jpg}
 \part{Competition Section}
+\begin{minipage}[c]{\linewidth}
+\centering
+\includegraphics[width=\linewidth]{Images/Main/competitionwoo.jpg}
+\end{minipage}
+
 \include{Competition/test}
 % \include{Competition/LessonsLearned}
 % \include{Competition/Meet1_LessonsLearned}
@@ -329,7 +434,7 @@ Responsible for running the Hagerty Robotics Twitter, Instagram, and website. Le
 % \include{Competition/Meet3_LessonsLearned}
 % \include{Competition/LeagueChamps}
 \cleardoublepage
-\partimage[width=1.1\textwidth]{Images/Main/cover.png}
+%\partimage[width=1.1\textwidth]{Images/Main/cover.png}
 \appendix
 %\appendixpage
 
@@ -343,4 +448,5 @@ Responsible for running the Hagerty Robotics Twitter, Instagram, and website. Le
 %\chapterstyle{southall}
 \listoffigures
 %\end{flushleft}
+
 \end{document}

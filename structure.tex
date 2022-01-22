@@ -1,16 +1,3 @@
-\errorcontextlines 10000
-% Use \raggedbottom to stop latex from trying to add space 
-% between sections to try to fill the page with text up to the 
-% bottom
-\raggedbottom
-
-\makeatletter
-% define a user command to choose the image
-% this command also creates an internal command to insert the image
-\newcommand{\partimage}[2][]{\gdef\@partimage{\includegraphics[#1]{#2}}}
-%\renewcommand{\printparttitle}[1]{\parttitlefont #1\vfil\@partimage\vfil}
-\makeatother
-
 %%% PACKAGES 
 %%%----------------------------------------------------
 \usepackage[utf8]{inputenc} % If utf8 encoding
@@ -44,11 +31,6 @@
 %\usepackage[breaklinks]{hyperref}
 \usepackage{placeins}
 \usepackage[tikz]{bclogo}
-
-%\setlength{\cftfigurenumwidth}{3em} % Memoir way of doing width.  Small space in list of figures table
-%\setlength{\cftchapternumwidth}{8mm}
-%\setlength{\cftsectionnumwidth}{10mm}
-
 \usepackage{algorithm}
 \usepackage{algorithmic}
 
@@ -56,8 +38,6 @@
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
-
-%\usepackage[bg=print, layout=false]{dnd}
 \usepackage{geometry}
     \geometry{
     left=0.15\paperwidth,
@@ -71,9 +51,6 @@
 %\usepackage{hyperref} %breaks everything.  Need to look into it.
 \def\hhsurl#1{\expandafter\string\csname #1\endcsname}
 
-%\renewcommand{\chapternumberline}[1]{}% Gobble chapter number in ToC
-%\renewcommand{\cftchapterdotsep}{\cftdotsep}% Chapter dots in ToC
-
 %Get rid of anoying pdf message about version 1.5
 %\pdfminorversion=6
 
@@ -81,6 +58,19 @@
 %\usepackage{booktabs}
 %\usepackage{multirow}
 
+\errorcontextlines 10000
+% Use \raggedbottom to stop latex from trying to add space 
+% between sections to try to fill the page with text up to the 
+% bottom
+\raggedbottom
+
+% \makeatletter
+% % define a user command to choose the image
+% % this command also creates an internal command to insert the image
+% \def\@partimage{}
+% \newcommand{\partimage}[2][]{\gdef\@partimage{\includegraphics[#1]{#2}}}
+% \renewcommand{\printparttitle}[1]{\parttitlefont #1\vfil\@partimage\vfil}
+% \makeatother
 
 %%% PAGE LAYOUT 
 %%%----------------------------------------------------
@@ -101,15 +91,30 @@
 %%% SECTIONAL DIVISIONS
 %%%----------------------------------------------------
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% reset section numbers on each part
+%
+\makeatletter
+\@addtoreset{section}{part}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Part: center title
+%
+\titleformat{\part}[display]
+{\normalfont\LARGE\color{red}\bfseries\centering}{}{0pt}{}
+[{\titlerule[0.8pt]}]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section: center title
+%
+\titleformat{\section}[display]
+{\normalfont\LARGE\bfseries\centering}{}{0pt}{}
+
+
 %\maxsecnumdepth{subsection} % Subsections (and higher) are numbered
 %\setsecnumdepth{subsection}
 
-%
-% Reset chapter numbers for each part
-%
-%\makeatletter
-%\@addtoreset{chapter}{part}
-%\makeatother 
 
 %\setsecheadstyle{\normalfont\large\bfseries}
 %\setsubsecheadstyle{\normalfont\normalsize\bfseries}
@@ -313,13 +318,13 @@
 
 \makepagenote
 
-%Code to make Figures stay within their \section (i.e. Programming):
-\makeatletter
-    \renewcommand\section{\@startsection {section}{1}{\z@}%
-       {-3.5ex \@plus -1ex \@minus -.2ex}%
-       {2.3ex \@plus.2ex}%
-       {\FloatBarrier\normalfont\large\bfseries}}
-\makeatother
+% %Code to make Figures stay within their \section (i.e. Programming):
+% \makeatletter
+%     \renewcommand\section{\@startsection {section}{1}{\z@}%
+%        {-3.5ex \@plus -1ex \@minus -.2ex}%
+%        {2.3ex \@plus.2ex}%
+%        {\FloatBarrier\normalfont\large\bfseries}}
+% \makeatother
 
 %Code to make Figures stay within their \subsection (i.e. Accomplishments):
 \makeatletter
@@ -351,13 +356,3 @@
   moredelim=[il][\textcolor{pgrey}]{$$},
   moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
 }
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% reset section numbers on each part
-%
-\makeatletter
-\@addtoreset{section}{part}
-\makeatother
-\titleformat{\part}[display]
-{\normalfont\LARGE\bfseries\centering}{}{0pt}{}
