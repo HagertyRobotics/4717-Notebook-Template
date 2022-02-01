@@ -106,10 +106,20 @@
 [{\titlerule[0.8pt]}]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Section: center title
+% SubSection: center title
 %
-\titleformat{\section}[display]
-{\normalfont\LARGE\bfseries\centering}{}{0pt}{}
+% \titleformat{\subsection}[display]
+% {\normalfont\LARGE\color{blue}\bfseries\centering}{}{0pt}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Remove section headers
+%
+\makeatletter
+\titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+%\titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
+\makeatother
+%\titlespacing{\section}{\parindent}{0pt}{0pt}
+\titlespacing{\subsection}{\parindent}{0pt}{0pt}
 
 
 %\maxsecnumdepth{subsection} % Subsections (and higher) are numbered

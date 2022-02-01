@@ -1,0 +1,4 @@
+magick mogrify -path ./ -resize 1000 -quality 80 Annika.png
+
+
+magick mogrify -path ./ -rotate 90 Falon.JPG
