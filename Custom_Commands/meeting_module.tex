@@ -6,7 +6,6 @@
 % 4) People/Committees Present 
 % 5) Picture 
 % 6) Start Time & Stop Time (ex. 12:30AM to 4:30PM)
-% 7) Weight (ex. 48)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\insertmeeting}[7]{
@@ -14,7 +13,7 @@
 %   meeting - chapter and section on the same heading
 %   headings - 
 %   ruled - horizontal line in the heading
-\section*(#1)
+\section*{#1}
 \pagestyle{plain}
 \addcontentsline{toc}{section}{\numberline{}#2 - #1}
 % \section[#2 - #1]{#2}
@@ -42,7 +41,7 @@
     \fbox{\includegraphics[width=3cm,height=3cm,keepaspectratio]
     {#5}}
     \centering
-    \par Bullseye (#7 lbs.)
+    \par Robot
 \end{minipage}
 %\noindent\rule{\textwidth}{1pt}
 \vspace{5mm}
