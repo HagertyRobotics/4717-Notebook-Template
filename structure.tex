@@ -229,6 +229,7 @@
 \input{Custom_Commands/monsterbox_bios_module.tex}
 \input{Custom_Commands/finance_module.tex}
 \input{Custom_Commands/hhs_committee.tex}
+\input{Custom_Commands/whats_next.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % new itemize enviroment that doesn't allow latex to put 
@@ -337,10 +338,21 @@
 % \makeatother
 
 %Code to make Figures stay within their \subsection (i.e. Accomplishments):
+% \makeatletter
+% \AtBeginDocument{%
+%   \expandafter\renewcommand\expandafter\subsubsection\expandafter
+%     {\expandafter\@fb@secFB\subsubsection}%
+%   \newcommand\@fb@secFB{\FloatBarrier
+%     \gdef\@fb@afterHHook{\@fb@topbarrier \gdef\@fb@afterHHook{}}}%
+%   \g@addto@macro\@afterheading{\@fb@afterHHook}%
+%   \gdef\@fb@afterHHook{}%
+% }
+% \makeatother
+
 \makeatletter
 \AtBeginDocument{%
-  \expandafter\renewcommand\expandafter\subsubsection\expandafter
-    {\expandafter\@fb@secFB\subsubsection}%
+  \expandafter\renewcommand\expandafter\subsection\expandafter
+    {\expandafter\@fb@secFB\subsection}%
   \newcommand\@fb@secFB{\FloatBarrier
     \gdef\@fb@afterHHook{\@fb@topbarrier \gdef\@fb@afterHHook{}}}%
   \g@addto@macro\@afterheading{\@fb@afterHHook}%
