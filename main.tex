@@ -5,13 +5,12 @@
 \documentclass[
 letterpaper, % Stock and paper size. 
 11pt, % Type size.
-% article,
 % oneside, 
 twoside,
 onecolumn, % Only one column of text on a page.
-% openright, % Each chapter will start on a recto page.
-% openleft, % Each chapter will start on a verso page.
-openany, % A chapter may start on either a recto or verso page.
+openright, % Each chapter will start on a recto page.
+%openleft, % Each chapter will start on a verso page.
+%openany, % A chapter may start on either a recto or verso page.
 %draft  % Don't render images
 ]{report} 
 
@@ -146,7 +145,6 @@ openany, % A chapter may start on either a recto or verso page.
                                                     
 \cleardoublepage
 \chapter*{Committees} 
-\pagestyle{plain}
 \noindent\textbf{\Huge Committees}
 %\addcontentsline{toc}{section}{\numberline{}Committees}
 \newline
@@ -380,9 +378,6 @@ openany, % A chapter may start on either a recto or verso page.
 \appendix
 %\appendixpage
 
-%\chapterstyle{plain}
-%\pagestyle{hhs_ruled}
-%\aliaspagestyle{chapter}{plain}
 \section{Custom Parts Reference}
 
 \include{CAD/reference}

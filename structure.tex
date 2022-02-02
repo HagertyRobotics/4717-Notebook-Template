@@ -36,6 +36,7 @@
 
 \usepackage{fancyvrb}
 
+
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
 \usepackage{geometry}
@@ -46,7 +47,14 @@
     bottom=0.1\paperwidth
     }
 
-\usepackage{titlesec}
+\usepackage[pagestyles]{titlesec}
+
+%\usepackage{titlesec}
+%\usepackage{titleps}
+
+%\usepackage{fancyhdr}
+
+%\usepackage[right=3.5in,showframe]{geometry}
 
 %\usepackage{hyperref} %breaks everything.  Need to look into it.
 \def\hhsurl#1{\expandafter\string\csname #1\endcsname}
@@ -267,7 +275,7 @@
 % 
 \newcommand{\interestingpagetable}{
 	\newpage	
-	\pagestyle{plain}
+	%\pagestyle{plain}
 	\textbf{\Huge Interesting Pages}
 	\addcontentsline{toc}{section}{\numberline{}Interesting Pages}
   
@@ -366,3 +374,19 @@
   moredelim=[il][\textcolor{pgrey}]{$$},
   moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
 }
+
+
+% \newpagestyle{hhsstyle}[\small]{
+%   \sethead[\thepage][][\thesection~\sectiontitle]{\subsectiontitle}{}{\thepage}
+% }
+
+\newpagestyle{hhsstyle}[\small]{
+\sethead[][][\thesection~\sectiontitle]{\subsectiontitle}{}{}
+\setfoot[\thepage][][]{}{}{\thepage}
+}
+
+% \pagestyle{fancy}
+% \fancyhf{}
+% \rhead{Overleaf}
+% \lhead{Guides and tutorials}
+% \rfoot{Page \thepage}
