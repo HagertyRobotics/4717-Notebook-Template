@@ -1,0 +1,53 @@
+% 1) Title
+% 2) Date
+% 3) Location
+% 4) Present
+% 5) Picture
+% 6) Start Time
+% 7) Stop Time
+\insertmeeting 
+	{Space Coast Meet \#2} 
+	{12/18/21}
+	{Odyssey Charter School}
+	{Jenson}
+	{Images/RobotPics/robot.jpg}
+	{8:00 - 5:00}
+	
+\section*{General}
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+\subsection*{Goals}
+\begin{itemize}
+    \item Watch kickoff
+    \item Brainstorm   
+
+\end{itemize} 
+
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+
+\subsection*{Accomplishments}
+Today, we watched the kickoff.
+ 
+
+\begin{figure}[ht]
+\centering
+\begin{minipage}[b]{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\textwidth]{Meetings/September/09-18-21/field.png}
+  \caption{New Account in Github}
+  \label{fig:pic1}
+\end{minipage}%
+\hfill%
+\begin{minipage}[b]{.48\textwidth}
+  \centering
+  \includegraphics[width=0.95\textwidth]{Meetings/September/09-18-21/field.png}
+  \caption{Screenshot of GitHub Repository}
+  \label{fig:pic2}
+\end{minipage}
+\end{figure}
+
+
+
+
+
+
+

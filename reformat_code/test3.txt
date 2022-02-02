@@ -1,1 +1,1 @@
-\subsection*{General}
+\hhscommittee{General}
