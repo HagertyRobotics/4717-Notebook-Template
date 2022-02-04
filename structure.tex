@@ -109,21 +109,27 @@
 {\normalfont\LARGE\color{blue}\bfseries\centering}{}{0pt}{}
 [{\titlerule[0.8pt]}]
 
+\titleformat{\chapter}
+  {\Large\bfseries} % format
+  {}                % label
+  {0pt}             % sep
+  {\huge}           % before-code
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SubSection: center title
 %
 % \titleformat{\subsection}[display]
 % {\normalfont\LARGE\color{blue}\bfseries\centering}{}{0pt}{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Remove section headers
-%
-\makeatletter
-\titleformat{\section}[runin]{}{}{0pt}{\@gobble}
-\titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
-\makeatother
-\titlespacing{\section}{\parindent}{0pt}{0pt}
-\titlespacing{\subsection}{\parindent}{0pt}{0pt}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Remove section headers
+% %
+% \makeatletter
+% \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+% %\titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
+% \makeatother
+% \titlespacing{\section}{\parindent}{0pt}{0pt}
+% %\titlespacing{\subsection}{\parindent}{0pt}{0pt}
 
 
 %\maxsecnumdepth{subsection} % Subsections (and higher) are numbered
@@ -385,7 +391,6 @@
 % }
 
 \newpagestyle{hhsstyle}[\small]{
-\sethead[][][\thesection~\sectiontitle]{\subsectiontitle}{}{}
+\sethead[][][]{}{}{}
 \setfoot[\thepage][][]{}{}{\thepage}
 }
-

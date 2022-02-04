@@ -31,6 +31,18 @@ openright, % Each chapter will start on a recto page.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Remove section headers
+%
+\makeatletter
+\titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+% \titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
+\makeatother
+\titlespacing{\section}{\parindent}{0pt}{0pt}
+% \titlespacing{\subsection}{\parindent}{0pt}{0pt}
+
+\pagestyle{hhsstyle}
+
 \begin{titlepage}
     \centering
     \includegraphics[width= 1.0\textwidth]{Images/Main/4717Logo.png}\par\vspace{1cm}
@@ -84,16 +96,15 @@ openright, % Each chapter will start on a recto page.
  % |______|    | |/ _ \/ _` | '_ ` _ \  |  ___/ _` | '__| __| |______|
  %             | |  __/ (_| | | | | | | | |  | (_| | |  | |_          
  %             |_|\___|\__,_|_| |_| |_| |_|   \__,_|_|   \__|         
-                                                                                                                                    
-\part{Team Section}
-\begin{minipage}[c]{\linewidth}
-\centering
-\includegraphics[width=\linewidth]{Images/Team/Team_Main.PNG}
-\end{minipage}
+                                                                                                                                
+\part[Team Section]{%
+    Team Section
+    \begin{center}
+        \includegraphics[width=\linewidth]{Images/Team/Team_Main.PNG}
+    \end{center}%
+}
 
 \cleardoublepage
-
-
 
 
 %        ____  _           
@@ -114,17 +125,19 @@ openright, % Each chapter will start on a recto page.
 % Team Bios 3 girls 11 boys 
 
 
-\include{Bios/RitamRana}
+
 \include{Bios/AnnikaYun}
 \include{Bios/AnouskaSeal}
-\include{Bios/FalonJones}
 \include{Bios/ClaytonWorkman}
-\include{Bios/LillySullivan}
+\include{Bios/FalonJones}
 \include{Bios/JensenMiller}
 \include{Bios/JamesHu}
+\include{Bios/LillySullivan}
 \include{Bios/NathanForrer}
-\include{Bios/SammanthaSemmel}
+\include{Bios/RatamRana}
 \include{Bios/RoseKiriazes}
+\include{Bios/SammanthaSemmel}
+
 
 % % Coaches
 % \include{Bios/M_PoDickison}
@@ -145,10 +158,12 @@ openright, % Each chapter will start on a recto page.
 
                                                     
 \cleardoublepage
-\chapter*{Committees} 
-\noindent\textbf{\Huge Committees}
-%\addcontentsline{toc}{section}{\numberline{}Committees}
-\newline
+\chapter{Committees} 
+\vspace{3em}
+\begin{minipage}[c]{\linewidth}
+\centering
+\includegraphics[width=\linewidth]{Committees/committee.png}
+\end{minipage}
 
 \include{Committees/committee.tex} 
 
@@ -161,7 +176,7 @@ openright, % Each chapter will start on a recto page.
 
 \cleardoublepage
 %\chapterstyle{hhs_blank_chapter}
-\chapter*{4717's Core Values}
+\chapter{4717's Core Values}
 \vspace{3em}
 \begin{minipage}[c]{\linewidth}
 \centering
@@ -193,7 +208,7 @@ openright, % Each chapter will start on a recto page.
 %Outreach
 %\chapterstyle{hhs_blank_chapter}
 % \newcounter{outreach_hours}
-\chapter{Outreach Section}
+\chapter{Outreach}
 \vspace{3em}
 \begin{minipage}[c]{\linewidth}
 \centering
@@ -232,16 +247,15 @@ openright, % Each chapter will start on a recto page.
  % |______| |  _ <| | | / __| | '_ \ / _ \/ __/ __| |  ___/ _` | '__| __| |______|
  %          | |_) | |_| \__ \ | | | |  __/\__ \__ \ | |  | (_| | |  | |_          
  %          |____/ \__,_|___/_|_| |_|\___||___/___/ |_|   \__,_|_|   \__|         
-                                                                                                                                                           
-\cleardoublepage
-\part{Business Section}
-\vspace{3em}
-\begin{minipage}[c]{\linewidth}
-\centering
-\includegraphics[width=\linewidth]{Images/Main/Big_wheel.JPG}
-\end{minipage}
+                   
+\part[Business Section]{%
+    Business Section
+    \begin{center}
+        \includegraphics[width=\linewidth]{Images/Main/Big_wheel.JPG}
+    \end{center}%
+}
 
-
+\cleardoublepage                                                                                                                                        
 
  %  ______ _                        _       _ 
  % |  ____(_)                      (_)     | |
@@ -287,6 +301,16 @@ openright, % Each chapter will start on a recto page.
  %      |_|  |_|\___|\___|\__|_|_| |_|\__, |___/
  %                                     __/ |    
  %                                    |___/  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Remove section headers
+%
+\makeatletter
+% \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+\titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
+\makeatother
+% \titlespacing{\section}{\parindent}{0pt}{0pt}
+\titlespacing{\subsection}{\parindent}{0pt}{0pt}
 
 \cleardoublepage
 \chapter{Meetings}
@@ -385,12 +409,9 @@ openright, % Each chapter will start on a recto page.
 \appendix
 %\appendixpage
 
-\section{Custom Parts Reference}
+% \section{Custom Parts Reference}
+% \include{CAD/reference}
 
-\include{CAD/reference}
-
-%\chapterstyle{southall}
 \listoffigures
-%\end{flushleft}
 
 \end{document}
