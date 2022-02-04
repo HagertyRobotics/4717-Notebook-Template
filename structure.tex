@@ -36,6 +36,7 @@
 
 \usepackage{fancyvrb}
 
+\usepackage[font=scriptsize]{caption}
 
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
@@ -48,11 +49,6 @@
     }
 
 \usepackage[pagestyles]{titlesec}
-
-%\usepackage{titlesec}
-%\usepackage{titleps}
-
-%\usepackage{fancyhdr}
 
 %\usepackage[right=3.5in,showframe]{geometry}
 
@@ -110,8 +106,14 @@
 % Part: center title
 %
 \titleformat{\part}[display]
-{\normalfont\LARGE\color{red}\bfseries\centering}{}{0pt}{}
+{\normalfont\LARGE\color{blue}\bfseries\centering}{}{0pt}{}
 [{\titlerule[0.8pt]}]
+
+\titleformat{\chapter}
+  {\Large\bfseries} % format
+  {}                % label
+  {0pt}             % sep
+  {\huge}           % before-code
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SubSection: center title
@@ -119,15 +121,15 @@
 % \titleformat{\subsection}[display]
 % {\normalfont\LARGE\color{blue}\bfseries\centering}{}{0pt}{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Remove section headers
-%
-\makeatletter
-\titleformat{\section}[runin]{}{}{0pt}{\@gobble}
-%\titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
-\makeatother
-\titlespacing{\section}{\parindent}{0pt}{0pt}
-%\titlespacing{\subsection}{\parindent}{0pt}{0pt}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % Remove section headers
+% %
+% \makeatletter
+% \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+% %\titleformat{\subsection}[runin]{}{}{0pt}{\@gobble}
+% \makeatother
+% \titlespacing{\section}{\parindent}{0pt}{0pt}
+% %\titlespacing{\subsection}{\parindent}{0pt}{0pt}
 
 
 %\maxsecnumdepth{subsection} % Subsections (and higher) are numbered
@@ -154,11 +156,6 @@
 %\normalcaptionwidth
 %\captiontitlefinal{.}
 %\setlength\belowcaptionskip{.5ex}
-
-% Don: breaks side by side figures
-%\captiondelim{\space } % A space between caption name and text
-%\captionnamefont{\small\bfseries} % Font of the caption name
-%\captiontitlefont{\small\normalfont} % Font of the caption text
 
 %\changecaptionwidth          % Change the width of the caption
 %\captionwidth{1\textwidth} %
@@ -237,6 +234,8 @@
 \input{Custom_Commands/design_module.tex}
 \input{Custom_Commands/monsterbox_bios_module.tex}
 \input{Custom_Commands/finance_module.tex}
+\input{Custom_Commands/hhs_committee.tex}
+\input{Custom_Commands/whats_next.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % new itemize enviroment that doesn't allow latex to put 
@@ -345,6 +344,17 @@
 % \makeatother
 
 %Code to make Figures stay within their \subsection (i.e. Accomplishments):
+% \makeatletter
+% \AtBeginDocument{%
+%   \expandafter\renewcommand\expandafter\subsubsection\expandafter
+%     {\expandafter\@fb@secFB\subsubsection}%
+%   \newcommand\@fb@secFB{\FloatBarrier
+%     \gdef\@fb@afterHHook{\@fb@topbarrier \gdef\@fb@afterHHook{}}}%
+%   \g@addto@macro\@afterheading{\@fb@afterHHook}%
+%   \gdef\@fb@afterHHook{}%
+% }
+% \makeatother
+
 \makeatletter
 \AtBeginDocument{%
   \expandafter\renewcommand\expandafter\subsection\expandafter
@@ -381,12 +391,6 @@
 % }
 
 \newpagestyle{hhsstyle}[\small]{
-\sethead[][][\thesection~\sectiontitle]{\subsectiontitle}{}{}
+\sethead[][][]{}{}{}
 \setfoot[\thepage][][]{}{}{\thepage}
 }
-
-% \pagestyle{fancy}
-% \fancyhf{}
-% \rhead{Overleaf}
-% \lhead{Guides and tutorials}
-% \rfoot{Page \thepage}
