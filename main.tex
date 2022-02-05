@@ -78,7 +78,7 @@ openright, % Each chapter will start on a recto page.
 % \end{figure}
 
 %\clearpage
-\cleardoublepage
+%\cleardoublepage
 
 % Below can be used to create a X on a large blank space on the pages. 
 
@@ -113,7 +113,6 @@ openright, % Each chapter will start on a recto page.
 %       | |_) | | (_) \__ \
 %       |____/|_|\___/|___/
                     
-\cleardoublepage
 \chapter{Bios}
 \vspace{3em}
 \begin{minipage}[c]{\linewidth}
@@ -155,8 +154,7 @@ openright, % Each chapter will start on a recto page.
 %       | |___| (_) | | | | | | | | | | | | |_| ||  __/  __/
 %        \_____\___/|_| |_| |_|_| |_| |_|_|\__|\__\___|\___|
 
-                                                    
-\cleardoublepage
+                                            
 \chapter{Committees} 
 \vspace{3em}
 \begin{minipage}[c]{\linewidth}
@@ -218,9 +216,12 @@ openright, % Each chapter will start on a recto page.
 %\cleardoublepage
 
 %CURRENT OUTREACH
+\include{Outreach/RoboBoat/RoboBoat}
+\include{Outreach/FLL_Team_Mentoring/FLL_Team_Mentoring}
+\include{Outreach/FLL_Jr_Mentoring/FLL_Jr_Mentoring}
+\include{Outreach/FLL_Tournament/FLL_Tournament}
 % \include{Outreach/LC_STEM_Fair}
 % \include{Outreach/SCC_Tech_Night/Seminole_Tech}
-% \include{Outreach/RoboBoat/RoboBoat}
 % \include{Outreach/ASF_Apollo_Prep/ASF_Apollo}
 % \include{Outreach/Kids_Summer_Camp/Kids_Summer_Camp}
 % \include{Outreach/Recruitment_Camp/Recruitment_Camp}
@@ -229,14 +230,12 @@ openright, % Each chapter will start on a recto page.
 % \include{Outreach/RoboPegz_Mentoring/RoboPegz_Mentoring}
 % \include{Outreach/Stenstrom_Elem_Demo/Stenstrom_Elem_Demo}
 % \include{Outreach/UCF_STEM_Day/UCF_STEM_Day}
-% \include{Outreach/FLL_Jr_Mentoring/FLL_Jr_Mentoring}
 % \include{Outreach/Maker_Faire/Maker_Faire}
 % \include{Outreach/B&N_Expo/B&N_Expo}
 % \include{Outreach/IITSEC/IITSEC}
 % \include{Outreach/JHMS_STEAM_Night/JHMS_STEAM_Night}
 % \include{Outreach/FLL_Team_Mentoring/FLL_Team_Mentoring}
 % \include{Outreach/Plaid_Mentoring/Plaid_Mentoring}
-% \include{Outreach/FLL_Tournament/FLL_Tournament}
 % \include{Outreach/Girls_in_Engineering/GirlsinEngineering}
 
 
@@ -247,7 +246,7 @@ openright, % Each chapter will start on a recto page.
  %          | |_) | |_| \__ \ | | | |  __/\__ \__ \ | |  | (_| | |  | |_          
  %          |____/ \__,_|___/_|_| |_|\___||___/___/ |_|   \__,_|_|   \__|         
                    
-\part[Business Section]{%
+\part[\HugeBusiness Section]{%
     Business Section
     \begin{center}
         \includegraphics[width=\linewidth]{Images/Main/Big_wheel.JPG}
@@ -284,12 +283,12 @@ openright, % Each chapter will start on a recto page.
  %                        |___/                                |___/  
 
 \cleardoublepage
-\part{Engineering Section}
-\vspace{3em}
-\begin{minipage}[c]{\linewidth}
-\centering
-\includegraphics[width=\linewidth]{Images/Main/Challenge.png}
-\end{minipage}
+\part[Engineering Section]{%
+    Engineering Section
+    \begin{center}
+        \includegraphics[width=\linewidth]{Images/Main/Challenge.png}
+    \end{center}%
+}
 
 
  %       __  __           _   _                 
@@ -437,11 +436,13 @@ openright, % Each chapter will start on a recto page.
  %                                | |                                                                
  %                                |_|    
 
-\part{Competition Section}
-\begin{minipage}[c]{\linewidth}
-\centering
-\includegraphics[width=\linewidth]{Images/Main/competitionwoo.jpg}
-\end{minipage}
+\cleardoublepage
+\part[Competition Section]{%
+    Competition Section
+    \begin{center}
+        \includegraphics[width=\linewidth]{Images/Main/competitionwoo.jpg}
+    \end{center}%
+}
 
 \include{Competition/test}
 % \include{Competition/LessonsLearned}

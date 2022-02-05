@@ -1,0 +1,69 @@
+\usepackage{wrapfig}
+\usepackage{calc}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{float}
+
+\newcommand{\insertoutreachHours}[8]{
+	\newpage	
+	\pagestyle{plain}
+	
+	%\begin{flushright}
+
+	%\begin{mdframed}[backgroundcolor=lightgray]
+	%\renewcommand \bcStyleTitre [1]{\centering \tikz \node [fill = blue!20,draw=black]{#1};} %
+	\begin{bclogo}[couleur = gray!30,arrondi = 0.1,
+	logo = \bcfleur, ombre = true]
+	\textbf{\Huge #1}
+    
+    \vspace{.25cm}
+    \noindent{Date: #2}
+    \newline
+    \noindent{Event Total: #3 Hours}
+
+    \end{bclogo}
+    %\end{mdframed}
+	%\end{flushright}
+	\addcontentsline{toc}{section}{\numberline{}#1}
+
+    
+    \noindent\makebox[\textwidth][c]{%
+	\begin{minipage}{\textwidth}
+	  \centering
+	  \includegraphics[width=0.75\linewidth]{Outreach/#4}
+	  %\captionof{figure}{Figure 1}
+	  %\label{fig:test1}
+	\end{minipage}}%
+    
+    \vspace{.25cm}		
+	\subsection*{Purpose: \hl{#5}}
+
+	\vspace{.25cm}		
+	\subsection*{Description}
+	#6	
+	% \begin{figure}[H]
+	% \centering
+	% \begin{minipage}{.5\textwidth}
+	%   \centering
+	%   \includegraphics[width=0.9\linewidth]{Outreach/#7}
+	%   %\captionof{figure}{Figure 1}
+	%   %\label{fig:test1}
+	% \end{minipage}%
+	% \begin{minipage}{.5\textwidth}
+	%   \centering
+	%   \includegraphics[width=0.9\linewidth]{Outreach/#8}
+	%   %\captionof{figure}{Figure 2}
+	%   %\label{fig:test2}
+	% \end{minipage}
+	% \end{figure}
+
+ \begin{figure}[h!]
+ \centering
+   \includegraphics[width=\textwidth, angle=0]{Outreach/#7}
+ \end{figure}
+
+ \begin{figure}[h!]
+ \centering
+   \includegraphics[width=\textwidth, angle=0]{Outreach/#8}
+ \end{figure}
+}
