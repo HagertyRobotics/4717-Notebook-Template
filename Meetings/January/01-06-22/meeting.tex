@@ -27,23 +27,19 @@
 
 \subsubsection*{Accomplishments}
 We started today with quick Google searches for general localization. We found a lot of resources for localization on robots with four wheels. These systems worked for both holonomic and differential drive bases. However, our three wheeled robot didn't exactly fit into either category. However, we did learn a lot about the fundamental principles used in localization. Essentially, we should be trying to find the distance the center of the robot traveled by taking the average of the change in left and right encoders. After taking these measurements, we should be able to use them in kinematic equations to figure out how the robot is traveling relative to the field. Our focus should be taking our encoder readings, which are in one dimension, and use trig functions and kinematic equations to convert them into field coordinates that can be used with Road Runner and other autonomous applications. 
- 
 
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
-\begin{minipage}[b]{.48\textwidth}
-  \centering
   \includegraphics[width=0.95\textwidth]{Meetings/January/01-06-22/1.6.22 Board with Odometry - James Hu.jpg}
   \caption{Whiteboard showing our ideas on approaching tricycle odometry}
   \label{fig:010622_1}
-\end{minipage}%
-\hfill%
-\begin{minipage}[b]{.48\textwidth}
-  \centering
+\end{figure}
+
+\begin{figure}[htp]
+\centering
   \includegraphics[width=0.95\textwidth]{Meetings/January/01-06-22/1.6.22 Corrected Pose Equation - James Hu.JPG}
   \caption{A screenshot from GM0 on transforming robot-centric coordinates into field-centric coordinates}
   \label{fig:010622_2}
-\end{minipage}
 \end{figure}
 
 \hhscommittee{Multimedia}
@@ -62,6 +58,7 @@ During today's meeting, the multimedia committee was focused primarily on script
 \whatsnext{
 \begin{itemize}
     \item During tomorrow's meeting, we will revise the script and make changes. We will get some peer review on it and edit it accordingly.
+    \item Focus on deriving formulas for tricycle drives. 
 \end{itemize} 
 }
 
