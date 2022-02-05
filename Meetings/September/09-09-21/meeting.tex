@@ -61,7 +61,12 @@ Once we had done all of this, we felt prepared for tonight, and continued to mak
 \subsubsection*{Accomplishments}
 During this meeting, we wanted to figure out why the robot was not strafing properly. Our mentor, Mr. Don Harper, suggested Logging the encoder values in Logcat in Android studio. We would do so by using the Log.i() implementation already in Java. This would allow us to be able to find out if the motors themselves were going at different speeds. We later found out that they were going at different speeds by just a tad. We then switched the power no matter where the joystick is to automatically 1 or -1 by using Math.floor() if a negative value was recorded on the Joystick and Math.ceil() if a positive value was recorded. The reason as to why we thought this would help is because the encoder values might have been off since different values on each side of the joystick could have been recorded. This, however was not the problem as the encoder values were still off. Even though the Mecanum drive was still going in an arc, we were glad to have finally found the root of the problem and are hopeful to fix it soon.
 
-
+\whatsnext{
+\begin{itemize}
+    \item hold FLL meetings
+    \item Find out why the encoder values for the 4 motors are different
+\end{itemize} 
+}
 
 
 
