@@ -20,6 +20,7 @@
 \subsubsection*{Goals}
 \begin{itemize}
     \item Create an ultrasonic sensor that helps us maintain distance to the wall. 
+    \item Write new vision for finding team elements.
 
 \end{itemize} 
 
@@ -52,9 +53,24 @@ The next step was in software. The first step was to find the heading of the rob
 \end{figure}
 
 
+
+\hhscommittee{Software}
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+\subsubsection*{Goals}
+\begin{itemize}
+    \item Create an ultrasonic sensor that helps us maintain distance to the wall. 
+
+\end{itemize} 
+
+\noindent\hfil\rule{\textwidth}{.4pt}\hfil
+
+\subsubsection*{Accomplishments}
+After seeing how the vision software we used at League Championships would find a green screen rather than our team element, we decided on making a vision software that would look for green in specified areas. Since the placement of our camera causes it to only see two out of the three barcodes, we draw two rectangles over each piece of tape for each side, for four in all. We continue to use the ranges of hue, saturation, and value of the team element. We look at the percent of green found in each rectangle when a team element is placed on the field. If the percent of green is above a certain threshold within one of the rectangles, then that determines the scoring level on the shipping hub. This gets rid of the chance of seeing any green in the background and mistaking it for our team element.
+
 \whatsnext{
 \begin{itemize}
     \item Implement ultrasonic sensor readings into the autonomous. 
+    \item Work on autonomous
 \end{itemize} 
 }
 
