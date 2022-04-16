@@ -26,45 +26,21 @@
 \noindent\hfil\rule{\textwidth}{.4pt}\hfil
 
 \subsubsection*{Accomplishments}
-Today our mentor suggested changing the way we use the PID on the arm. Although our SimpleMovingAverage from last time greatly improved our consistency, we might be able to make it better. Currently, we used a positional PID and adjusting for gravity by subtracing a constant. One suggestion we had was to use a velocity PID 
+Today our mentor suggested changing the way we use the PID on the arm. Although our SimpleMovingAverage from last time greatly improved our consistency, we might be able to make it better. Currently, we used a positional PID and adjusting for gravity by subtracing a constant. One suggestion we had was to use a velocity PID when moving the arm far away from the target, then switching to a positional PID when the arm approaches its target position. In theory, this solution should help make the arm's movement smoother throughout the entire range of motion. However, we encountered a few problems with this approach. For example, the arm seemed to oscillate heavily when we switched to using the positional PID at values close to the target when compared to using a pure positional PID throughout. Even when we moved the coefficients to extremely low values, the arm movement never seemed as smooth. One possibility that the velocity PID was telling the arm to move too quickly, making it slightly more difficult for the positional PID to account for the higher momentum. 
 
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=0.95\textwidth, angle=0]{Meetings/March/03-14-22/03-14-22 1.JPG}
-\caption{The final cut out of the carbon fiber plate. The drill bit didn't go all the way through.}
-\label{fig:031022_1}
+\includegraphics[width=0.95\textwidth, angle=0]{Meetings/March/03-17-22/03-17-22 1.png}
+\caption{A flowchart showing the basic idea of a velocity PID that we would use.}
+\label{fig:031722_1}
 \end{figure}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.95\textwidth, angle=0]{Meetings/March/03-14-22/03-14-22 2.JPG}
-\caption{The software we used to prepare the file.}
-\label{fig:031022_2}
-\end{figure}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.95\textwidth, angle=0]{Meetings/March/03-14-22/03-14-22 3.JPG}
-\caption{The CNC machine we used.}
-\label{fig:031022_3}
-\end{figure}
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.95\textwidth, angle=0]{Meetings/March/03-14-22/03-14-22 4.jpg}
-\caption{Lewis Hamilton's car also uses carbon fiber.}
-\label{fig:031022_4}
-\end{figure}
-
-
-
 
 
 
 \whatsnext{
 \begin{itemize}
-    \item Work to improve the autonomous program. 
+    \item Explore more ways to improve the arm movement. 
 \end{itemize} 
 }
 
