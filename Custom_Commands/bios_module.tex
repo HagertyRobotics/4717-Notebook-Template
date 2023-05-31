@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 
-\newcommand{\insertbio}[8]{
+\newcommand{\insertbio}[7]{
 	\newpage	
 	\pagestyle{hhsstyle}
 	\begin{flushright}
@@ -42,33 +42,7 @@
 	  %\captionof{figure}{Figure 1}
 	  %\label{fig:test1}
 	\end{minipage}%
-	\begin{minipage}{.5\textwidth}
-	  \centering
-	  \includegraphics[width=0.95\linewidth]{Bios/Images/#8}
-	  %\captionof{figure}{Figure 2}
-	  %\label{fig:test2}
-	\end{minipage}
 	\end{figure}
 }
 
-%%% OLD CODE %%%
-% \newcommand{\insertbio}[6]{
-% 	\pagestyle{headings}
-% 	\section {#1}
-% 	\index{#1} 
-    
-%     \normalcaptionwidth	%memior caption stuff
-%     %\setlength{\intextsep}{0pt}%
-% 	%\setlength{\columnsep}{0pt}%
-% 	\begin{wrapfigure}{L}{0pt}
 
-%       %\vspace{-10pt}
-%       \centering
-%       \includegraphics[width=0.4\textwidth]{Bios/#2}
-%       \caption{#1}
-      
-%       %\vspace{-10pt}
-% 	\end{wrapfigure}
-%     #6
-%     \changecaptionwidth   %memior caption stuff
-% }

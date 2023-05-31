@@ -8,7 +8,7 @@
 % 6) Start Time & Stop Time (ex. 12:30AM to 4:30PM)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\insertmeeting}[7]{
+\newcommand{\insertmeeting}[6]{
 % pagestyle
 %   meeting - chapter and section on the same heading
 %   headings - 
@@ -30,25 +30,7 @@
         \item #6
     \end{description} 
 \end{minipage}%
-\hfill
-\begin{minipage}[b]{0.35\linewidth}
-	\raggedleft
-
-    %\includegraphics[scale=0.3]{#5}
-    %\setlength{\fboxsep}{0pt}\fbox{
-    %\includegraphics[width=.3\linewidth]
-    %\frame{\includegraphics[width=3cm,height=3cm,keepaspectratio]
-    \fbox{\includegraphics[width=3cm,height=3cm,keepaspectratio]
-    {#5}}
-    \centering
-    \par Robot
-\end{minipage}
 %\noindent\rule{\textwidth}{1pt}
-\vspace{5mm}
-\begingroup % because of color
-	\color{gray}%
-	\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
-\endgroup
 
 \end{figure}%
 }  %end newcommand
