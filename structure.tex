@@ -106,7 +106,7 @@
 % Part: center title
 %
 \titleformat{\part}[display]
-{\normalfont\LARGE\color{blue}\bfseries\centering}{}{0pt}{}
+{\normalfont\LARGE\color{black}\bfseries\centering}{}{0pt}{}
 [{\titlerule[0.8pt]}]
 
 \titleformat{\chapter}
@@ -149,79 +149,9 @@
 \renewcommand\fps@table{htbp}  %
 \makeatother                   %
 
-%\captiondelim{\null\newline}
-%\captionnamefont{\small\sffamily\bfseries}
-%\captiontitlefont{\small\sffamily\linespread{.84}\selectfont}
-%\captionstyle[\centering]{\raggedright}
-%\normalcaptionwidth
-%\captiontitlefinal{.}
-%\setlength\belowcaptionskip{.5ex}
-
-%\changecaptionwidth          % Change the width of the caption
-%\captionwidth{1\textwidth} %
-
-%%% ABSTRACT
-%%%----------------------------------------------------
-
-%\renewcommand{\abstractnamefont}{\normalfont\small\bfseries} % Font of abstract title
-%\setlength{\absleftindent}{0.1\textwidth} % Width of abstract
-%\setlength{\absrightindent}{\absleftindent}
-
-%%% HEADER AND FOOTER 
-%%%----------------------------------------------------
-
-
-%
-% Add graphics directories to search
-%
-%\graphicspath{{Images/}}
-
-%%% TABLE OF CONTENTS
-%%%----------------------------------------------------
-
-% Only parts, chapters and sections in the table of contents
-%\maxtocdepth{subsection} 
-%\settocdepth{subsection}
-
-% Make overflow at end of line for big pages numbers go away
-%\setpnumwidth{2.5em}
-
-% Center part number on line and add color
-%\makeatletter
-%\renewcommand{\partnumberline}[1]{\sffamily\large\bfseries\color{blue}\hfil\hspace\@tocrmarg Part #1:~}
-%\makeatother
-%\renewcommand{\cftpartfont}{\large\normalfont}
-%\cftpagenumbersoff{part}
-
-% Add Colored text before each "part" of TOC
-%\cftpagenumbersoff{part}
-%\renewcommand{\cftpartpresnum}{\sffamily\large\bfseries\color{blue}\partname\ }
-%\renewcommand{\cftpartaftersnumb}{\\}
-%\cftsetindents{part}{0em}{0em}
-
-% Center Part Numbers in TOC
-%\makeatletter
-%\renewcommand\partnumberline[1]{\hfil\hspace\@tocrmarg #1~}
-%\makeatother
-
 % Add a \par to the end of the TOC
 \AtEndDocument{\addtocontents{toc}{\par}} 
 
-% Add "Meeting" at the start of each TOC entry
-%\renewcommand{\cftchaptername}{Meeting\space}
-
-%%% INTERNAL HYPERLINKS
-%%%----------------------------------------------------
-
-%\usepackage{hyperref}   % Internal hyperlinks
-%\hypersetup{
-%pdfborder={0 0 0},      % No borders around internal hyperlinks
-%pdfauthor={I am the Author} % author
-%}
-%\usepackage{memhfixc}
-
-%%% NEW COMMANDS
-%%%----------------------------------------------------
 \input{Custom_Commands/bios_module.tex}
 \input{Custom_Commands/mentors_module.tex}
 \input{Custom_Commands/CV_module.tex}
