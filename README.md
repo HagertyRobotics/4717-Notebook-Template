@@ -8,18 +8,18 @@ https://www.sublimetext.com/3
 ```bash
 https://github.com/TeXworks/texworks/releases
 ```
-
-Open folder in TeXworks
+ 
+#### Open folder in TeXworks ####
 ```bash
 TeXworks → file → Open → choose Notebook-4717-2023/main.tex
 ```
 
-Open folder in Sublime
+#### Open folder in Sublime ####
 ```bash
 Sublime → file → Open Folder → choose Notebook-4717-2023
 ```
 
-Add entry
+#### Add entry ####
 ```bash
 Create folder for date(for meeting) or event(for outreach) 
 Right click folder to add entry in Sublime → New File → Ctrl + S → name file and add .tex (ex: meeting.tex) → save
