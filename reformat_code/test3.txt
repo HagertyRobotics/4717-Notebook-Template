@@ -1,1 +1,1 @@
-\hhscommittee{General}
+\committee{General}
