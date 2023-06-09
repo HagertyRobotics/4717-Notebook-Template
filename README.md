@@ -1,4 +1,8 @@
-# Notebook-4717-2019-1
+# 4717-Notebook-Template
+
+#### Install Sublime ####
+
+
 
 COPY INTO .GIT>INFO>EXCLUDE:
 # git ls-files --others --exclude-from=.git/info/exclude
