@@ -1,10 +1,35 @@
 # 4717-Notebook-Template
 
 #### Install Sublime ####
+```bash
+https://www.sublimetext.com/3
+```
+#### Install TeXworks ####
+```bash
+https://github.com/TeXworks/texworks/releases
+```
 
+Open folder in TeXworks
+```bash
+TeXworks → file → Open → choose Notebook-4717-2023/main.tex
+```
 
+Open folder in Sublime
+```bash
+Sublime → file → Open Folder → choose Notebook-4717-2023
+```
 
-COPY INTO .GIT>INFO>EXCLUDE:
+Add entry
+```bash
+Create folder for date(for meeting) or event(for outreach) 
+Right click folder to add entry in Sublime → New File → Ctrl + S → name file and add .tex (ex: meeting.tex) → save
+Begin entry (follow Meeting_Example.tex or other entries)
+Pictures in the entry must be in their respective folder for the date or event
+Write \include{path} in main.tex → save 
+Compile in TeXworks by pressing green play button
+```
+
+<!-- COPY INTO .GIT>INFO>EXCLUDE:
 # git ls-files --others --exclude-from=.git/info/exclude
 # Lines that start with '#' are comments.
 # For a project mostly in C, the following would be a good set of
@@ -100,3 +125,4 @@ acs-*.bib
 *.[1-9][0-9][0-9]
 *.[1-9]R
 *.[1-9][0-9]R
+ -->
